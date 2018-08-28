@@ -1,3 +1,5 @@
+package net.java8.lambda;
+
 import org.junit.Test;
 
 import java.util.Arrays;
