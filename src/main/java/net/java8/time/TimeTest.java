@@ -37,8 +37,12 @@ public class TimeTest {
 
     @Test
     public void test2() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
         LocalDateTime time1 = LocalDateTime.now();
-        System.out.println(time1);
+        String format = dtf.format(time1);
+        System.out.println(format);
+
+
         System.out.println(time1.toEpochSecond(ZoneOffset.ofHours(8)));
 
         //创建时间
@@ -119,5 +123,6 @@ public class TimeTest {
 
         LocalDateTime now = LocalDateTime.now(ZoneId.of("Asia/Shanghai"));
         System.out.println(now);
+
     }
 }
